@@ -14,8 +14,9 @@ prompt = """Act as an expert translator in Chinese-English. You will receive a
             writing in Chinese, then you should do these following instructions.
             1. Read the writing carefully.
             2. Finding the words which is in HSK4-6 levels in the receivied writing. Listed them out. Then, Find each word's pinyin, part of speech and give its meaning in English. Label the word with its HSK level, one of "HSK4", "HSK5", "HSK6" too. 
+            The writing is delimited by <TEXT> and </TEXT> tags.
 
-            List them in a JSON array.
+            List the them in a JSON array.
             The suggestion should be in the form which is one suggestion per line.
             Each line should have these fields:
             - "Words" - the word which is in HSK4-6 levels
@@ -26,7 +27,7 @@ prompt = """Act as an expert translator in Chinese-English. You will receive a
             Make sure that the suggestions should be sorted by the HSK level of the word, from "HSK4" to "HSK5" to "HSK6".
 
             Don't say anything at first. Wait for the user to say something.
-        """    
+        """   
 
 # This is the main function in this application
 st.title("PA5 LLM application")
